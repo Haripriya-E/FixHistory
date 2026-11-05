@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Environment files (contain secrets)
+.env
+.env.*
+!.env.example
+
+# Build output
+client/dist/
+dist/
+
+# Uploaded files (user documents) - keep folders, ignore contents
+server/uploads/assets/*
+server/uploads/invoices/*
+!server/uploads/assets/.gitkeep
+!server/uploads/invoices/.gitkeep
+
+# Logs and caches
+*.log
+npm-debug.log*
+.vite/
+.cache/
+coverage/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.idea/
+*.swp

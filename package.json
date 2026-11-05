@@ -1,0 +1,23 @@
+{
+  "name": "fixhistory",
+  "version": "1.0.0",
+  "description": "FixHistory - Digital Maintenance Passport (MERN full-stack application)",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install --prefix server && npm install --prefix client",
+    "setup": "node scripts/setup-env.js",
+    "dev": "concurrently --names server,client --prefix-colors blue,green --kill-others-on-fail \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test": "npm test --prefix server",
+    "build": "npm run build --prefix client",
+    "start": "npm run build --prefix client && npm run start:prod --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}
